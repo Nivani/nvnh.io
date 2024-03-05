@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "About";
+const description = "About Nick, a software engineer from Belgium.";
+const permalink = `${Astro.site.href}about`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="about">
+  <div class="container">
+    <h1>About</h1>
+    <figure class="about-image">
+      <img src="/assets/professional-picture.webp" alt="Illustration of a notebook" width="330">
+    </figure>
+    <p>Hi, I'm Nick 👋. I'm a software engineer from Belgium. I help teams solve business problems by building software.</p>
+    <p>I love the challenge of leveraging technology to turn fuzzy problems into crisp software solutions. Always balancing best practices, pragmatism and creativity.</p>
+    <p>I work as a tech lead, architect or individual contributor in Javascript / Typescript, Java / Kotlin and Go.</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-image {
+    float: right;
+    margin: -3em -7em 2em 2em;
+    max-width: 300px;
+  }
+
+  .about-image img {
+    border-radius: 50%;
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 1020px) {
+    .about-image {
+      float: none;
+      margin: 0 auto 2em;
+      max-width: 200px;
+    }
+  }
+</style>

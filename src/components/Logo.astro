@@ -1,0 +1,44 @@
+<style>
+  a {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-family: var(--font-family-sans);
+    font-size: 40px;
+    line-height: 1.0;
+    text-decoration: none;
+  }
+
+  img {
+    display: inline-block;
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 520px) {
+    img {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    div {
+      display: none;
+    }
+  }
+
+  .in-progress {
+    position: absolute;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+</style>
+
+<a href="/">
+  <img alt="NVNH.io Logo" src="/assets/professional-picture.webp" height="50" />
+  <div>
+    NVNH.io
+    <div class="in-progress">New site, in progress...</div>
+  </div>
+</a>
