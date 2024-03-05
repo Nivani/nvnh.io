@@ -1,0 +1,17 @@
+---
+
+import CtaTddExercise from "./CtaTddExercise.html";
+
+function findCtaContent(ctaString) {
+    switch (ctaString) {
+        case "CtaTddExercise":
+            return CtaTddExercise;
+        default:
+            return undefined;
+    }
+}
+
+const CtaContent = findCtaContent(Astro.props.cta);
+---
+
+{CtaContent && <CtaContent/>}

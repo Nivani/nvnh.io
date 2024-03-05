@@ -2,6 +2,7 @@
 title: Avoid the pain of mocking modules with dependency injection
 publishDate: 2022-09-18
 description: When you're unit testing, there is no way around it, from time to time you'll need mocking...
+cta: CtaTddExercise
 ---
 
 When you're unit testing, there is no way around it: from time to time you'll need mocking. Modern testing libraries have support for *mocking modules*. This means injecting mocks into the module system. Both [Jest](https://jestjs.io/docs/mock-functions#mocking-modules) and [Vitest](https://vitest.dev/guide/mocking.html#modules) have support for this.

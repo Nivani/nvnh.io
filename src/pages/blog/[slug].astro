@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../components/BaseLayout.astro";
 import formatDate from "../../utils/format-date.js";
+import CallToAction from "../../components/CallToAction.astro";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("./blog-posts/*.md");
@@ -11,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { Content, frontmatter } = Astro.props.post;
-const { title, description, publishDate } = frontmatter;
+const { title, description, publishDate, cta } = frontmatter;
 const { slug } = Astro.props.post.file.split("/").pop().split(".").shift()
 const permalink = `${Astro.site.href}blog/${slug}`;
 ---
@@ -26,6 +27,10 @@ const permalink = `${Astro.site.href}blog/${slug}`;
     <article class="content">
       <Content />
     </article>
+    {cta &&
+      <hr>
+      <CallToAction cta={cta}/>
+    }
   </div>
 </BaseLayout>
 
