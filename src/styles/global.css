@@ -143,6 +143,7 @@ code {
 pre {
   border-radius: 8px !important;
   margin: 1.2em 0 !important;
+  border: 1px solid #ddd !important;
   padding: 1.2em;
 }
 

@@ -6,4 +6,9 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://nivani.github.io",
   integrations: [mdx(), sitemap()],
-})
+  markdown: {
+    shikiConfig: {
+      theme: "light-plus",
+    },
+  },
+});

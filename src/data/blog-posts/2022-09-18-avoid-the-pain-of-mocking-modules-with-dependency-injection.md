@@ -1,6 +1,6 @@
 ---
 title: Avoid the pain of mocking modules with dependency injection
-publishDate: 18 Sep 2022
+publishDate: 2022-09-18
 description: When you're unit testing, there is no way around it, from time to time you'll need mocking...
 ---
 
@@ -55,21 +55,132 @@ It says "constructing objects" because this technique has its origin in object-o
 
 This is the function we will be testing:
 
-<script src="https://gist.githubusercontent.com/Nivani/ea18f2d5bce43a10089674adb0c37f5c/a1471b434c59a3b25b01c39bfdbd86340bb40ffe.js?file=get-products.js"></script>
+```js
+import axios from "axios";
+
+export function getProducts() {
+    return axios.get("/products").then(result => {
+        if (result.status === 200) {
+            return result.data
+        } else {
+            return Promise.reject(result);
+        }
+    });
+}
+```
 
 And a Jest test that mocks the Axios module:
 
-<script src="https://gist.githubusercontent.com/Nivani/ea18f2d5bce43a10089674adb0c37f5c/a1471b434c59a3b25b01c39bfdbd86340bb40ffe.js?file=get-products.spec.js"></script>
+```js
+import axios from "axios";
+import { getProducts } from "./get-products";
+
+jest.mock("axios");
+
+describe("getProducts()", () => {
+    it("happy flow", async () => {
+        const products = [
+            { id: "PRODUCT-1", name: "Product 1" },
+            { id: "PRODUCT-2", name: "Product 2" },
+        ];
+        axios.get.mockResolvedValue({
+            status: 200,
+            data: products,
+        });
+
+        expect(await getProducts()).toEqual(products);
+    });
+
+    it("handles unexpected status code correctly", async () => {
+        axios.get.mockResolvedValue({
+            status: 404,
+            data: "Not found",
+        });
+        const catchMock = jest.fn();
+
+        await getProducts().catch(catchMock);
+
+        expect(catchMock).toHaveBeenCalledWith({
+            status: 404,
+            data: "Not found",
+        });
+    });
+});
+```
 
 We have to mock the Axios module here because there is no other way to make `getProducts()` call a different Axios instance. The current implementation is tightly coupled to the default Axios instance.
 
 We can fix that with DI, let's see what the code looks like:
 
-<script src="https://gist.githubusercontent.com/Nivani/ea18f2d5bce43a10089674adb0c37f5c/767043cbe40aa6977fc66a6baf12581dca4960d7.js?file=get-products.js"></script>
+```js
+import defaultAxios from 'axios';
+
+// createGetProducts() is a factory function that takes
+// getProducs()'s dependencies as parameters
+export function createGetProducts(axios) {
+    // By defining the function inside the factory function we can use
+    // axios from the factory function instead of the module system.
+    return function getProducts() {
+        return axios.get('/products').then(result => {
+            if (result.status === 200) {
+                return result.data;
+            } else {
+                return Promise.reject(result);
+            }
+        });
+    }
+}
+
+// By creating an exported getProducts() function with default dependencies
+// you can still import getProducts in other modules like you are used to.
+export const getProducts = createGetProducts(defaultAxios);
+```
 
 In the tests we can now use the factory function `createGetProducts()` to create our own version of getProducts with a mocked Axios instance. No need to get fancy, the mock is also plain JS:
 
-<script src="https://gist.githubusercontent.com/Nivani/ea18f2d5bce43a10089674adb0c37f5c/767043cbe40aa6977fc66a6baf12581dca4960d7.js?file=get-products.spec.js"></script>
+```js
+import { createGetProducts } from "./get-products";
+
+describe("getProducts()", () => {
+    it("happy flow", async () => {
+        const products = [
+            { id: "PRODUCT-1", name: "Product 1" },
+            { id: "PRODUCT-2", name: "Product 2" },
+        ];
+        const mockAxios = mockAxiosGet({
+            status: 200,
+            data: products,
+        });
+        const getProducts = createGetProducts(mockAxios);
+
+        expect(await getProducts()).toEqual(products);
+    });
+
+    it("handles an unexpected status code correctly", async () => {
+        const mockAxios = mockAxiosGet({
+            status: 404,
+            data: "Not found",
+        });
+        const getProducts = createGetProducts(mockAxios);
+        const catchMock = jest.fn();
+
+        await getProducts().catch(catchMock);
+
+        expect(catchMock).toHaveBeenCalledWith({
+            status: 404,
+            data: "Not found",
+        });
+    });
+});
+
+function mockAxiosGet(response) {
+    return {
+        get() {
+            return Promise.resolve(response);
+        },
+    };
+}
+```
 
 By using DI instead of module mocking:
 
