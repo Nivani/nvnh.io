@@ -1,12 +1,12 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "../../components/BaseLayout.astro";
 import formatDate from "../../utils/format-date.js";
 
 const title = "NVNH.io - software.";
 const description = "Blog website about building good software. The stuff that stays with you for years to come!";
 const permalink = Astro.site.href;
 
-let allPosts = await Astro.glob("../../data/blog-posts/*.md");
+let allPosts = await Astro.glob("./blog-posts/*.md");
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---
 

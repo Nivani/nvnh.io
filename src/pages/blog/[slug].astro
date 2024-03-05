@@ -1,9 +1,9 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "../../components/BaseLayout.astro";
 import formatDate from "../../utils/format-date.js";
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob("../../data/blog-posts/*.md");
+  const posts = await Astro.glob("./blog-posts/*.md");
   return posts.map(p => ({
     params: { slug: p.file.split("/").pop().split(".").shift() },
     props: { post: p },
