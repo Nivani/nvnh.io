@@ -2,6 +2,7 @@
 title: Avoid the pain of mocking modules with dependency injection
 publishDate: 2022-09-18
 description: When you're unit testing, there is no way around it, from time to time you'll need mocking...
+image: the-pain-of-mocking-modules.jpg
 cta: CtaTddExercise
 ---
 
