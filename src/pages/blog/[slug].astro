@@ -2,6 +2,7 @@
 import BaseLayout from "../../components/BaseLayout.astro";
 import formatDate from "../../utils/format-date.js";
 import CallToAction from "../../components/CallToAction.astro";
+import TrackScrolling from "../../components/TrackScrolling.astro";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob("./blog-posts/*.md");
@@ -33,6 +34,7 @@ const permalink = `${Astro.site.href}blog/${slug}`;
       <CallToAction cta={cta}/>
     }
   </div>
+  <TrackScrolling/>
 </BaseLayout>
 
 <style>
