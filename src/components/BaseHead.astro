@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions"
 import "../styles/fonts.css"
 import "../styles/global.css"
+import IncludeAnalytics from "./IncludeAnalytics.astro";
 
 export interface Props {
   title: string
@@ -37,7 +38,6 @@ const socialUrl = Astro.site.href + "assets/social.png"
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialUrl} />
 
-<!-- Analytics -->
-<script defer src="https://analytics.eu.umami.is/script.js" data-website-id="de7625a0-8842-47c8-b1a1-0764201653fb"></script>
+<IncludeAnalytics/>
 
 <ViewTransitions />
