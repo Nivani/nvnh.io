@@ -22,10 +22,9 @@ const permalink = `${Astro.site.href}blog/${slug}`;
   <header>
     <p>{formatDate(publishDate)}</p>
     <h1>{title}</h1>
-    <hr />
   </header>
   <div class="container">
-    {image && <img src={`/assets/blog/${image}`}>}
+    {image ? <img src={`/assets/blog/${image}`}> : <hr />}
     <article class="content">
       <Content />
     </article>
