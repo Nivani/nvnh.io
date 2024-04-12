@@ -1,7 +1,7 @@
 ---
 title: Automatic HTTPS for all your development servers
 publishDate: 2022-10-24
-description: When you're unit testing, there is no way around it, from time to time you'll need mocking...
+description: Every developer gets into a situation from time to time, where you're developing a new feature, all the tests pass, you run the application, test everything thoroughly, the result looks great! So you push the code, it gets deployed and... it doesn't work. What the hell is going on?! It works on my machine! ...
 cta: CtaNewsletter
 ---
 
