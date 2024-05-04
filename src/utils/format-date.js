@@ -5,5 +5,10 @@ const formatter = new Intl.DateTimeFormat("default", {
 });
 
 export default function formatDate(date) {
-  return formatter.format(new Date(date));
+  try {
+    return formatter.format(new Date(date));
+  } catch (e) {
+    console.error(`Could not format date "${date}"`, e);
+    return "";
+  }
 }
