@@ -49,7 +49,7 @@ What is the underlying trait of people who do these things?
 
 **Empathy**!
 
-Accept that nobody's perfect. Show that you care about doing better as a team and making things suck less for everybody:
+Accept that nobody's perfect, show that you care about doing better as a team and make things better for everyone:
 1. Make an effort to understand legacy code
 2. Share what you learn
 3. Write code that other people can understand
