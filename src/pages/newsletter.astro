@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../components/BaseLayout.astro";
-import NewsletterSignupForm from "../components/NewsletterSignupForm.html";
+import NewsletterSignup from "../components/NewsletterSignup.astro";
 
 const title = "Newsletter";
 const description = "Newsletter about the fundamentals of building good software. The stuff that stays relevant for a whole career";
@@ -10,19 +10,6 @@ const permalink = `${Astro.site.href}newsletter`;
 <BaseLayout title={title} description={description} permalink={permalink} current="newsletter">
     <div class="container">
         <h1>Newsletter</h1>
-        <p>Stop trying to keep up with every new technology to stay relevant! Technologies come and go, but the fundamentals of building good software don't.</p>
-        <p>
-            I will occasionally send you an e-mail about the fundamentals of building good software.
-            About the things full stack engineers generally struggle with and solutions that stand the test of time. The stuff that stays relevant for the rest of your career!
-        </p>
-        <NewsletterSignupForm/>
-        <p>Examples of topics:</p>
-        <ul>
-            <li>Building high-quality software (and why)</li>
-            <li>Dealing with changing requirements</li>
-            <li>Keeping the software in a good place when business only wants features ASAP</li>
-            <li>Dealing with legacy code</li>
-            <li>etc...</li>
-        </ul>
+        <NewsletterSignup/>
     </div>
 </BaseLayout>
