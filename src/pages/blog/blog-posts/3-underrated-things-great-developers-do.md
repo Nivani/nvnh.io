@@ -40,7 +40,7 @@ When you're new to a codebase, you have a unique view on it. Use this unique vie
 
 ### 3. Write code that other people can understand
 
-Unless you're writing some temporary internal tool, code will be [read more than it's written](https://skeptics.stackexchange.com/questions/48560/is-code-read-more-often-than-its-written). Even if the rest of the code is unreadable spaghetti, you can still make the code you add and update more readable. Write [clean code](https://nvnh.io/index.php/2022/07/31/4-tips-to-understand-your-code-4-months-from-now/) and provide tests.
+Unless you're writing some temporary internal tool, code will be [read more than it's written](https://skeptics.stackexchange.com/questions/48560/is-code-read-more-often-than-its-written). Even if the rest of the code is unreadable spaghetti, you can still make the code you add and update more readable. Write [clean code](/blog/4-tips-to-understand-your-code-4-months-from-now/) and provide tests.
 
 
 ### The underlying trait

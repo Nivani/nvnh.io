@@ -36,7 +36,7 @@ Having a solid grasp of the fundamentals enables you to be much more effective a
 Good resources on fundamentals for full stack developers:
 * [The Pragmatic Programmer](https://www.goodreads.com/book/show/52715562-the-pragmatic-programmer) by David Thomas and Andrew Hunt is full of all-around timeless advice.
 * [Clean Code](https://www.goodreads.com/book/show/3735293-clean-code) by Robert C. Martin (aka. Uncle Bob), about (you guessed it): writing clean code.
-* [Composing Software](https://medium.com/javascript-scene/composing-software-the-book-f31c77fc3ddc) by Eric Elliott, about FP in Javascript. There is [a disclaimer](/index.php/2022/09/04/composing-software-by-eric-elliot-what-you-need-to-know/) though.
+* [Composing Software](https://medium.com/javascript-scene/composing-software-the-book-f31c77fc3ddc) by Eric Elliott, about FP in Javascript. There is [a disclaimer](/blog/composing-software-by-eric-elliot-what-you-need-to-know/) though.
 * [Head First Design Patterns](https://www.goodreads.com/book/show/56083609-head-first-design-patterns) by Eric Freeman and Elisabeth Robson, about OO and design patterns.
 * [Designing with the Mind in Mind](https://www.goodreads.com/book/show/8564020-designing-with-the-mind-in-mind) by Jeff Johnson, about fundamental UI design guidelines.
 

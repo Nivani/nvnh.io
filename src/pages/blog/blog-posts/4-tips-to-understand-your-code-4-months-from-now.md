@@ -1,7 +1,7 @@
 ---
 title: 4 tips to understand your code 4 months from now
 publishDate: 2022-07-31
-description: As software developers, we've all been there. You're writing some code, you know it's dirty, but the deadline's coming closer, and you go "it's working now, I'll just **refactor it later", and we all know how that turns out...
+description: As software developers, we've all been there. You're writing some code, you know it's dirty, but the deadline's coming closer, and you go "it's working now, I'll just refactor it later", and we all know how that turns out...
 cta: CtaNewsletter
 ---
 

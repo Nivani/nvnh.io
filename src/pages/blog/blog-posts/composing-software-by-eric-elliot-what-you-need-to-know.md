@@ -5,7 +5,7 @@ description: Functional programming (FP) is a big deal in the Javascript communi
 cta: CtaNewsletter
 ---
 
-Functional programming (FP) is a big deal in the Javascript community. It's one of the fundamentals of building good software and great to learn if you want to [grow as a developer](/index.php/2022/07/05/how-to-grow-as-a-developer-without-getting-overwhelmed/).
+Functional programming (FP) is a big deal in the Javascript community. It's one of the fundamentals of building good software and great to learn if you want to [grow as a developer](/blog/how-to-grow-as-a-developer-without-getting-overwhelmed/).
 
 FP has its roots in math academia, so a lot of the learning material is theoretical, making it hard to wrap your head around. It's not always easy to see how you can apply it in your day job. The more practical information is scattered and often hidden in documentation for specific libraries.
 

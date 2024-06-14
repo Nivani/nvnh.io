@@ -33,7 +33,7 @@ In the chapter ["Visualizing the impact of internal quality"](https://martinfowl
 
 ![High quality vs low quality](/assets/blog/high-quality-vs-low-quality.png "High quality vs low quality")
 
-I've seen this happen an number of times. When someone says "bad code will slow us down (cost us money) in the future", people seem to think that we're talking about **some far-away future**, like more than a year from now. But it **doesn't take long** for low-quality code to start **slowing us down**. For **larger teams**, I agree with Martin Fowler, it's a matter of **weeks**. For **smaller teams**, it may take a little longer, but we're still talking no more than [a few **months**](/index.php/2022/07/31/4-tips-to-understand-your-code-4-months-from-now/).
+I've seen this happen a number of times. When someone says "this code will slow us down (cost us money) in the future", people seem to think that we're talking about some **far-away future**, like more than a year from now. But it **doesn't take long** for low-quality code to start **slowing us down**. For **larger teams**, I agree with Martin Fowler, it's a matter of **weeks**. For **smaller teams**, it may take a little longer, but we're still talking no more than [a few **months**](/blog/4-tips-to-understand-your-code-4-months-from-now/).
 
 The only situations where you **can** be faster by quickly hacking something together is when all of these apply:
 * Short-term results are the only thing that matters
