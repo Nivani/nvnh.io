@@ -33,8 +33,7 @@ This brings us to the next one:
 
 ### 2. Share what you learn
 
-I'm not talking about: "Here's how I heard they do X at FAANG, and by the way: we should do this here too!"  
-but rather: "Here's what I found out about this undocumented part of the code."
+I'm not talking about "I heard they do X at FAANG, and by the way: we should do this here too!", but rather: "Here's what I found out about this undocumented part of the code."
 
 When you're new to a codebase, you have a unique view on it. Use this unique view to make it easier for developers coming after you. Ask yourself: "What piece of information was I missing? What made the codebase click for me?". Focus on patterns that help someone understand the code as a whole, or a notoriously difficult part of the code. Create diagrams (see [C4 model](https://en.wikipedia.org/wiki/C4_model) for inspiration) with some text and share them with your colleagues. Either in your team chat, or in a dedicated knowledge sharing session.
 

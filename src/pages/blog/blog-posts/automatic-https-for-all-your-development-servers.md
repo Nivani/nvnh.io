@@ -29,7 +29,7 @@ If you're using Windows Subsystem for Linux (WSL), `mkcert -install` will not in
 
 You will need `docker compose` to run the reverse proxy, so make sure you have Docker and [Docker Compose](https://docs.docker.com/compose/install/) installed on your system.
 
-Try `docker compose --help` or `docker-compose --help` to see if you already have it installed.
+Try `docker compose --help` to see if you already have it installed.
 
 ## Overview
 
@@ -169,7 +169,7 @@ services:
 
 Traefik should now start without any problems by running `docker compose up`:
 
-![Console output for docker-compose up](/assets/blog/traefik-started.png "Console output for docker-compose up")
+![Console output for docker compose up](/assets/blog/traefik-started.png "Console output for docker compose up")
 
 ## Make sure your domain name resolves to localhost
 
