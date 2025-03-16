@@ -2,14 +2,15 @@
     trackScrollEvent(0.1);
     trackScrollEvent(0.4);
     trackScrollEvent(0.75);
+    trackScrollEvent(0.9);
 
     function trackScrollEvent(trackPercentage) {
         const listener = (e) => {
-            const scrollValue = e.view.scrollY;
+            const scrollValue = window.scrollY;
             const maxScrollValue = e.target.offsetHeight || document.body.offsetHeight;
             const percentage = scrollValue / maxScrollValue;
             if (percentage > trackPercentage) {
-                umami.track(`Scroll ${trackPercentage * 100}%`)
+                umami.track(`Scroll ${trackPercentage * 100} percent`);
                 removeEventListener("scrollend", listener);
             }
         };
