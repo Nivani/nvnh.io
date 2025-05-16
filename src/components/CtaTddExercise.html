@@ -47,7 +47,7 @@
            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
     </style>
     <div id="mc_embed_signup">
-        <form action="https://nvnh.us17.list-manage.com/subscribe/post?u=e298845160752d2eba26fd749&amp;id=163da5c191&amp;f_id=0006bce0f0"
+        <form action="/signup?type=tdd-exercise"
               method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
               target="_blank" novalidate="novalidate">
             <div id="mc_embed_signup_scroll">
@@ -80,7 +80,14 @@
         </form>
     </div>
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">(function ($) {
+    <script type="text/javascript">
+      setTimeout(function () {
+        const form = document.getElementById("mc-embedded-subscribe-form");
+        if (form) {
+          form.action = "https://nvnh.us17.list-manage.com/subscribe/post?u=e298845160752d2eba26fd749&amp;id=163da5c191&amp;f_id=0006bce0f0";
+        }
+      }, 1000);
+
       window.fnames = new Array();
       window.ftypes = new Array();
       fnames[0] = 'EMAIL';
@@ -89,7 +96,6 @@
       ftypes[1] = 'text';
       fnames[2] = 'LNAME';
       ftypes[2] = 'text';
-    }(jQuery));
-    var $mcj = jQuery.noConflict(true);</script>
+    </script>
 </div>
 <p>No spam, no sharing your data with third parties, unsubscribe at any time.</p> </div>
