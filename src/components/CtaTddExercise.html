@@ -86,16 +86,20 @@
         if (form) {
           form.action = "https://nvnh.us17.list-manage.com/subscribe/post?u=e298845160752d2eba26fd749&amp;id=163da5c191&amp;f_id=0006bce0f0";
         }
-      }, 1000);
 
-      window.fnames = new Array();
-      window.ftypes = new Array();
-      fnames[0] = 'EMAIL';
-      ftypes[0] = 'email';
-      fnames[1] = 'FNAME';
-      ftypes[1] = 'text';
-      fnames[2] = 'LNAME';
-      ftypes[2] = 'text';
+        const mailChimpScript = document.createElement("script");
+        mailChimpScript.src = "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+        document.documentElement.appendChild(mailChimpScript);
+
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = 'EMAIL';
+        ftypes[0] = 'email';
+        fnames[1] = 'FNAME';
+        ftypes[1] = 'text';
+        fnames[2] = 'LNAME';
+        ftypes[2] = 'text';
+      }, 1000);
     </script>
 </div>
 <p>No spam, no sharing your data with third parties, unsubscribe at any time.</p> </div>
