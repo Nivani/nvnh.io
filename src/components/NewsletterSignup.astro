@@ -69,7 +69,12 @@
         setTimeout(function () {
             const form = document.getElementById("mc-embedded-subscribe-form");
             if (form) {
-                form.action = "https://nvnh.us17.list-manage.com/subscribe/post?u=e298845160752d2eba26fd749&amp;id=163da5c191&amp;f_id=0006bce0f0";
+                form.action = [
+                    "https:/",
+                    "nvnh.us17.list-manage.com",
+                    "subscribe",
+                    "post?u=e298845160752d2eba26fd749&amp;id=163da5c191&amp;f_id=0006bce0f0",
+                ].join("/");
             }
 
             const mailChimpScript = document.createElement("script");
