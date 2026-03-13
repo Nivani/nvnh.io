@@ -19,6 +19,8 @@ How software will be divided into these categories will depend on how far we can
 
 **These people will be engineers.**
 
+To get a sense of what it might look like, check out [Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html).
+
 The cool thing about level 1 is that it's an efficient candidate pool for natural selection to level 3. Domain experts can do their own experimentation before having to bring an engineer on board and they can show, not tell when they do. If we follow [Jevons Paradox](https://en.wikipedia.org/wiki/Jevons_paradox) this increase in accessibility will lead to an increased demand for software, though the demand will partly be met without the intervention of an engineer.
 
 This, together with updating existing software to leverage AI will keep software engineers in great demand.
